@@ -3,21 +3,21 @@
   // create a short variable name
   $name = trim($_POST['name']);
   $email = trim($_POST['email']);
-  $feedback = trim($_POST['feedback']);
+  $comments = trim($_POST['comments']);
   
   // define static informations
-  $toaddress = "feedback@example.com";
+  $to = "comments@example.com";
   
-  $subject = "Feedback from website";
+  $subject = "Comments from website";
   
-  $mailcontent = "Customer name : ".str_replace("\r\n", "", $name).
-             "Customer email: ".str_replace("\r\n", "", $email).
-             "Customer feedback:\n".str_replace("\r\n", "", $feedback);
+  $mailcontent = "User name : ".str_replace("\r\n", "", $name).
+             "User email: ".str_replace("\r\n", "", $email).
+             "User comments:\n".str_replace("\r\n", "", $comments);
              
-  $fromaddress = "From webaster@example.com";
+  $from = "From webaster@example.com";
   
   // call mail() function to send an email
-  mail($toaddress, $subject, $mailcontent, $fromaddress);
+  mail($to, $subject, $mailcontent, $from);
  
 ?>
 <!DOCTYPE html>
@@ -30,8 +30,8 @@
 </head>
 <body>
 
-    <h1>Feedback submitted</h1>
-    <p>You feedback (shown below) has been sent.</p>
-    <p><?php echo nl2br(htmlspecialchars($feedback)); ?></p>
+    <h1>Comments submitted</h1>
+    <p>Your comments has been sent.</p>
+    <p><?php echo nl2br(htmlspecialchars($comments)); ?></p>
 </body>
 </html>
