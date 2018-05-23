@@ -1,6 +1,6 @@
 <?php 
 
-  // create a sort variable name
+  // create a short variable name
   $name = trim($_POST['name']);
   $email = trim($_POST['email']);
   $feedback = trim($_POST['feedback']);
