@@ -21,4 +21,17 @@ Function trim() removes the whitespace at the beginning and at the end of a stri
 For example, the character < converts to $lt; 
 
 The key issue with email is that headers are separated from the string \r \n. So we should take care of this, so the user data that we use at email headers do not contain these characters, otherwise, we are at the risk of being attacked.
+One way is to use the function str_replace().
+
+In a simple case like this, when you have to replace a whole string with other string, you should always use the str_replace() function.
+
+3. The nl2br() function:
+
+This feature is useful for viewing a large string in the browser. For example, you can use this function to format the customer comments and display them in a more readable form:
+
+<p><?php echo nl2br(htmlspecialchars($feedback)); ?></p>
+
+HTML does not care about whitespace, so if you don't filter this output with nl2br(), will be showing up as a single line.
+
+First we apply the htmlspecialchars() function and then the nl2br() because if we did this with the opposite order, <br/> tags, that nl2br() function inserted would be translated at HTML entities from the htmlspecialchars() function therefore, there would be no effect. 
 
