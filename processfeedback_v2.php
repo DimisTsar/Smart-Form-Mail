@@ -1,4 +1,4 @@
-?php 
+<?php 
 
   // create a sort variable name
   $name = trim($_POST['name']);
