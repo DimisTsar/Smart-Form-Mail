@@ -1,7 +1,7 @@
 # Smart-Form-Mail
 A Smart Form Mail in PHP
 
-processfeedback_v2.php has the following
+comments.php has the following
 
 Order processing script, which formats user data for output to an email and to HTML.
 
@@ -13,7 +13,7 @@ At the beginning of the script, when you  give short names to input variables of
 
 $name = trim($_POST['name']);
 $email = trim($_POST['email']);
-$feedback = trim($_POST['feedback']);
+$comments = trim($_POST['comments']);
 
 Function trim() removes the whitespace at the beginning and at the end of a string and returns the resulting string. 
 
@@ -29,7 +29,7 @@ In a simple case like this, when you have to replace a whole string with other s
 
 This feature is useful for viewing a large string in the browser. For example, you can use this function to format the customer comments and display them in a more readable form:
 
-<?php echo nl2br(htmlspecialchars($feedback)); ?>
+<?php echo nl2br(htmlspecialchars($comments)); ?>
 
 HTML does not care about whitespace, so if you don't filter this output with nl2br(), τηε φεεδβαψκ will be showing up as a single line.
 
