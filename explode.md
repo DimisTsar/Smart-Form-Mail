@@ -1,4 +1,4 @@
-To take a domain name from the customer's email address in the script, you can use the code below:<br/>
+To take a domain name from the customer's email address in the script, you can use the code below:<br/><br/>
 <strong>$email_arr = explode('@', $email);</strong>
 <br/><br/>
 This call to explode() breaks up the email address in to parts: <br/>1. The user name, which stored to $email_arr[0] and <br/> 2. the domain name, which stored to $email_arr[1].
